@@ -27,7 +27,7 @@ namespace LogDashboard
         /// <summary>
         /// Url match
         /// </summary>
-        public string PathMatch { get; set; }
+        public string PathMatch { get; internal set; }
 
         public bool FileSource { get; set; }
 

@@ -3,13 +3,23 @@ namespace LogDashboard.Extensions
     public static class LogDashboardOptionsExtensions
     {
         /// <summary>
+        /// 设置访问路径
+        /// </summary>
+        /// <param name="options">LogDashboardOptions</param>
+        /// <param name="pathMatch">访问路径</param>
+        public static void SetPathMatch(this LogDashboardOptions options, string pathMatch)
+        {
+            options.PathMatch = pathMatch;
+        }
+
+        /// <summary>
         /// 设置根目录
         /// </summary>
         /// <param name="options">LogDashboardOptions</param>
         /// <param name="rootPath">日志根目录哦</param>
-        public static void SetRootPath(this LogDashboardOptions options,string rootPath)
+        public static void SetRootPath(this LogDashboardOptions options, string rootPath)
         {
-            options.RootPath=rootPath;
+            options.RootPath = rootPath;
         }
 
         /// <summary>

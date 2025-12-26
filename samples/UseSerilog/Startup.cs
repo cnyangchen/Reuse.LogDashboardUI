@@ -20,6 +20,7 @@ namespace UseSerilog
         {
             services.AddLogDashboard(opt =>
             {
+                opt.PathMatch = "/logUI";
                 opt.CustomLogModel<ApplicationLogModel>();
             });
         }
@@ -32,7 +33,7 @@ namespace UseSerilog
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseLogDashboard();
+            app.UseLogDashboard("/logUI");
 
             app.Run(async (context) =>
             {
