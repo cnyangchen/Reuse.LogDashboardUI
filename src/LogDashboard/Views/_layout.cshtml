@@ -17,11 +17,12 @@
 </head>
 <body class="sidebar-fixed header-fixed">
     <div class="page-wrapper">
+        @if(Context.Options.EnableHeaderNav){
         <nav class="navbar page-header">
             <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
                 <i class="fa fa-bars"></i>
             </a>
-            <a class="navbar-brand" href="https://github.com/liangshiw/LogDashboard" target="_blank">
+            <a class="navbar-brand" href="@Context.Options.ExternalLink" target="_blank">
                 <h2>@Context.Options.Brand</h2>
             </a>
             <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
@@ -36,6 +37,7 @@
                 </li>
             </ul>
         </nav>
+        }
         <div class="main-container">
             <div class="sidebar">
                 <nav class="sidebar-nav">
@@ -55,7 +57,9 @@
                 </nav>
             </div>
             <div class="content" id="content">
-                @RenderBody()
+                <div class="content-box">
+                    @RenderBody()
+                </div>
             </div>
         </div>
     </div>

@@ -13,10 +13,17 @@ namespace LogDashboard
     public class LogDashboardOptions
     {
         /// <summary>
+        /// 开启Header导航
+        /// </summary>
+        public bool EnableHeaderNav { get; set; } = true;
+        /// <summary>
         /// Default value : Log Dashboard
         /// </summary>
         public string Brand { get; set; }
-
+        /// <summary>
+        /// 外链
+        /// </summary>
+        public string ExternalLink { get; set; } = "https://github.com/liangshiw/LogDashboard";
         /// <summary>
         /// Url match
         /// </summary>
